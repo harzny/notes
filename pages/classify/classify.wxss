@@ -1,0 +1,53 @@
+/* pages/classify/classify.wxss */
+.tip {
+  width: 206rpx;
+  height: 36rpx;
+  margin: 24rpx 16rpx;
+  border: 1rpx solid #929292;
+  border-radius: 4rpx;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20rpx;
+  line-height: 36rpx;
+  text-align: center;
+  color: #929292;
+}
+
+.input-cell .van-field__control{
+  width: 526rpx !important;
+  height: 72rpx !important;
+  background: #F7F8F8 !important;
+  border: 2rpx solid #EFF0F1 !important;
+  border-radius: 40rpx ;
+  padding:0 64rpx !important;
+  box-sizing: border-box  !important;
+}
+.input-cell .van-field__body{
+  width: 526rpx;
+  margin: 64rpx auto 0;
+}
+
+.submit-btn {
+  width: 224rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background: #648CEB;
+  box-shadow: 0px 2rpx 10rpx #5F82D6;
+  border-radius: 40rpx;
+  color: #ffffff;
+  /* padding-top: 72rpx; */
+  margin-top: 48rpx;
+  margin-bottom: 36rpx;
+  border: none;
+}
+
+button[disabled]:not([type]){
+  background: #DEE0EB;
+  box-shadow: 0px 2rpx 14rpx #E2E5F0;
+  border-radius: 40rpx;
+  color: white;
+}
+.van-calendar {
+  height: 90%,
+}

@@ -1,0 +1,119 @@
+/* pages/history/history.wxss */
+.date-card{
+  padding: 16rpx 68rpx;
+}
+.date-main{
+  width: 614rpx;
+  height: 132rpx;
+  background: #EDEDED;
+  box-shadow: inset 0rpx 0rpx 12rpx rgba(197, 204, 217, 0.25);
+  border-radius: 12rpx;
+  padding: 24rpx 22rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+}
+.card-item{
+  background-image: linear-gradient(to bottom,white 0% , white 49%,#E7E7E7 49%,#E7E7E7 54%, white 54%, white 100%);
+  box-shadow: 0px 4rpx 10rpx rgba(178, 178, 178, 0.25);
+  border-radius: 12rpx;
+  width: 56rpx;
+  height: 84rpx;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60rpx;
+  color: #3E4041;     
+  text-align: center;
+}
+.split{
+  width: 10rpx;
+  height: 15rpx;
+  align-self: flex-end;
+}
+.history-main{
+  padding: 32rpx 56rpx;
+}
+.history-item{
+  display: flex;
+  margin-bottom: 50rpx;
+}
+.title{
+  font-weight: 600;
+  font-size: 36rpx;
+  color: #3E4041;
+  margin-right: 24rpx;
+}
+.info{
+  font-size: 36rpx;
+  color: #3E4041;
+  /* 换行 */
+  white-space: normal;
+  word-break: break-all;
+}
+/* .van-hairline--top{
+
+} */
+.main-info{
+  width: 676rpx;
+  height: 680rpx;
+  padding:0 48rpx;
+  box-sizing: border-box;
+}
+.today-in-history{
+  height: 28rpx;
+  padding-top: 48rpx;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #929396;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  .today-in-history>image{
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    top: 32rpx;
+    right: 24rpx;
+   
+  }
+.today{
+  padding:24rpx 0;
+  height: 20rpx;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #3E4041;
+}
+.divider{
+  position: absolute;
+  width: 572rpx;
+  height: 2rpx;
+  left: 48rpx;
+  top: 164rpx;
+  background: #EDEDED;
+}
+.get-title{
+  padding-top: 48rpx;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 100%;
+  color: #3E4041;
+}
+.get-content{
+  padding-top: 48rpx;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #747474;
+  }

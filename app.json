@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/list/list",
+    "pages/bill/bill",
+    "pages/pay/pay",
+    "pages/userInfo/userInfo",
+    "pages/classify/classify",
+    "pages/regist/regist",
+    "pages/history/history",
+    "pages/user/user",
+    "pages/edit/edit",
+    "pages/insertBill/insertBill",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#648CEB",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#7395DD",
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "列表",
+        "iconPath": "/assets/icon/list.png",
+        "selectedIconPath": "/assets/icon/list2.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/assets/icon/classify.png",
+        "selectedIconPath": "/assets/icon/classify2.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "古今",
+        "iconPath": "/assets/icon/history.png",
+        "selectedIconPath": "/assets/icon/history2.png"
+      },
+      {
+        "pagePath": "pages/bill/bill",
+        "text": "记账",
+        "iconPath": "/assets/icon/account.png",
+        "selectedIconPath": "/assets/icon/account2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/assets/icon/user.png",
+        "selectedIconPath": "/assets/icon/user2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-field": "/vant/weapp/field/index"
+  }
+}

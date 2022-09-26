@@ -1,0 +1,167 @@
+/* pages/insertBill/insertBill.wxss */
+
+.top-cha {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 88rpx;
+}
+
+.top-cha .cha-image {
+  margin-left: 36rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.top-cha .insert-image {
+  margin-left: 200rpx;
+}
+
+.insert-image image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.expand-code {
+  margin-left: 210rpx;
+  margin-bottom: 16rpx;
+}
+
+.income-code {
+  margin-left: 72rpx;
+  margin-bottom: 16rpx;
+}
+
+.expand-code text {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #000333;
+}
+
+.income-code text {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  text-align: center;
+  color: #ACABA9;
+}
+
+.icon {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.mapper-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60rpx;
+  height: 92rpx;
+  margin-top: 36rpx;
+  margin-left: 56rpx;
+}
+
+.mapper-icon image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.mapper-icon text {
+  margin-top: 20rpx;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #F5F6F8;
+}
+
+.bottom-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 15rpx 0rpx 20rpx;
+}
+
+.money {
+  padding-right: 50rpx;
+  width: 58rpx;
+  height: 44rpx;
+  color: #F45762;
+}
+
+.zero {
+  font-size: 36rpx;
+}
+
+.bottom-two {
+  margin-top: 20rpx;
+  display: flex;
+  text-align: center;
+  color: #000;
+}
+
+.items-two {
+  width: 184rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  margin-right: 16rpx;
+}
+
+.two-other {
+  width: 104rpx;
+  height: 60rpx;
+}
+
+.bottom-other {
+  margin-top: 25rpx;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  color: #000;
+}
+
+.number {
+  width: 168rpx;
+  height: 84rpx;
+  background-color: #ffffff;
+  line-height: 84rpx;
+  color: #000;
+  border-radius: 16rpx;
+}
+
+.bottom image {
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: middle;
+}
+
+.bottom-body {
+  padding: 0 10rpx 20rpx 10rpx;
+}
+
+.save {
+  color: #FFFFFF;
+  background: #EB5860;
+}

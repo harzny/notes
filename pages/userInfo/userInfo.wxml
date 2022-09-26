@@ -1,0 +1,9 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class="my-container">
+  <van-cell-group >
+  <van-cell title="手机账号" value="{{userAccount}}" />
+  <van-cell title="注销账号" bindtap="logout" />
+</van-cell-group>
+<van-dialog id="van-dialog" />
+
+</view>

@@ -1,0 +1,98 @@
+<!--pages/pay/pay.wxml-->
+<view class="my-container">
+  <view class="nav">
+    <image src="/assets/icon/false.svg"></image>
+    <view class="pay_income">
+      <view style="color: #333; margin: 0 20rpx;">支出</view>
+      <view style="color: #ACABA9; margin: 0 20rpx;">收入</view>
+    </view>
+    <image src="/assets/icon/addd.svg"></image>
+  </view>
+
+  <view class="main">
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+    <view class="box">
+      <image src="/assets/icon/three.svg"></image>
+      <view class="main_font">三餐</view>
+    </view>
+  </view>
+
+
+  <van-action-sheet show="{{ true }}" overlay="{{false}}" round="{{false}}">
+    <view class="computer">
+      <view class="c_top">
+        <input class="input" bindinput='{true}' value="{{moneyAll}}" placeholder="点此输入备注" />
+        <view class="total_sum">{{oldmoneyAll}}</view>
+      </view>
+      <view class="c_center" >
+          <button bindtap="btnClick" data-index="10" class= "{{index=='10'?'click_btn':'today'}}">今天</button>
+          <button bindtap="btnClick" data-index="11" class= "{{index=='11'?'click_btn2':'btn2'}}">报销</button>
+          <button bindtap="btnClick" data-index="12" class= "{{index=='12'?'click_btn2':'btn2'}}">图片</button>
+          <button bindtap="btnClick" data-index="4" class= "btn2"><image src="/assets/icon/flag.svg"></image></button>
+      </view>
+
+      <view class="c_bottom">
+        <button bindtap="btnClick" data-index="1" class= "{{index=='1'?'click_btn2':'btn2'}}">1</button>
+        <button bindtap="btnClick" data-index="2" class= "{{index=='2'?'click_btn2':'btn2'}}">2</button>
+        <button bindtap="btnClick" data-index="3" class= "{{index=='3'?'click_btn2':'btn2'}}">3</button>
+        <button bindlongtap="deleteAllMath" bindtap="deleteMath" data-index="delete" class= "{{index=='delete'?'click_btn2':'btn2'}}"><image src="/assets/icon/delete.svg"></image></button>
+        <button bindtap="btnClick" data-index="4" class= "{{index=='4'?'click_btn2':'btn2'}}">4</button>
+        <button bindtap="btnClick" data-index="5" class= "{{index=='5'?'click_btn2':'btn2'}}">5</button>
+        <button bindtap="btnClick" data-index="6" class= "{{index=='6'?'click_btn2':'btn2'}}">6</button>
+        <button bindtap="useMath" data-index="-" class= "{{index=='-'?'click_btn2':'btn2'}}">-</button>
+        <button bindtap="btnClick" data-index="7" class= "{{index=='7'?'click_btn2':'btn2'}}">7</button>
+        <button bindtap="btnClick" data-index="8" class= "{{index=='8'?'click_btn2':'btn2'}}">8</button>
+        <button bindtap="btnClick" data-index="9" class= "{{index=='9'?'click_btn2':'btn2'}}">9</button>
+        <button bindtap="useMath" data-index="+" class= "{{index=='+'?'click_btn2':'btn2'}}">+</button>
+        <button bindtap="btnClick" data-index="rewrite" class= "{{index=='rewrite'?'click_btn2':'btn2'}}">再记</button>
+        <button bindtap="btnClick" data-index="0" class= "{{index=='0'?'click_btn2':'btn2'}}">0</button>
+        <button bindtap="btnClick" data-index="." class= "{{index=='.'?'click_btn2':'btn2'}}">.</button>
+        <button bindtap="btnClick" data-index="" class= "{{index==''?'click_btn2':'btn2'}}">保存</button>
+      </view>
+
+    </view>
+  </van-action-sheet>
+</view>

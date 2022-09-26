@@ -1,0 +1,32 @@
+<!--pages/history/history.wxml-->
+<view class="my-container">
+  <view class="date-card">
+    <view class="date-main">
+      <view wx:for="{{nowDate.year}}" wx:key="*this" class="card-item">{{item}}</view>
+      <image class="split" src="/assets/icon/split.svg"></image>
+      <view wx:for="{{nowDate.month}}" wx:key="*this" class="card-item">{{item}}</view>
+      <image class="split" src="/assets/icon/split.svg"></image>
+      <view wx:for="{{nowDate.date}}" wx:key="*this" class="card-item">{{item}}</view>
+    </view>
+  </view>
+  <view class="history-main">
+    <view class="history-item" data-lsdate="{{item.lsdate}}" data-title="{{item.title}}" bindtap="openDialog" wx:for="{{list}}" wx:key="*this">
+      <view class="title">{{item.lsdate}}</view>
+      <view class="info">{{item.title}}</view>
+    </view>
+  </view>
+
+  <van-dialog use-slot show="{{ dialogShow }}" close-on-click-overlay showConfirmButton="{{false}}">
+    <view class="main-info">
+      <view class="today-in-history">TODAY IN HISTORY
+        <image bindtap="closeDialog" src="/assets/icon/close.svg"></image>
+      </view>
+      <view class="today">{{nowDate.month}}月{{nowDate.date}}日 历史上的今天</view>
+      <view class="divider"></view>
+      <view class="get-title">{{currentLsdate}}</view>
+      <view class="get-content">{{currentTitle}}</view>
+    </view>
+  </van-dialog>
+
+
+</view>

@@ -1,0 +1,64 @@
+<!--pages/list/list.wxml-->
+
+<view class="my-container">
+  <!-- 顶部搜索 -->
+  <van-field placeholder="搜索..." model:value="{{noteTitle}}" bind:confirm="search">
+    <image class="search-img" bindtap="sideShow" slot="left-icon" src="/assets/icon/search.svg"></image>
+  </van-field>
+
+
+  <view class="my-main">
+    <view class="note-list">
+      <view class="note-item" data-item="{{item}}" data-id="{{item.noteId}}" data-noteTitle="{{item.noteTitle}}" bindtap="toEdit" bindlongpress="showOper" wx:for="{{noteList}}" wx:key="id">
+        <view class="note-info">
+          <view>{{item.noteTitle}}</view>
+          <view>{{item.updatedTime}}</view>
+        </view>
+        <view class="note-icons" >
+          <image class="lock-btn" wx:if="{{item.isEncryption}}" data-id="{{item.noteId}}" bindtap="showOper" src="/assets/icon/lock.svg"></image>
+          <image class="top-btn" wx:if="{{item.isTop}}" data-id="{{item.noteId}}" bindtap="showOper" src="/assets/icon/top.svg"></image>
+          <image class="more-btn" data-item="{{item}}" data-id="{{item.noteId}}" catchtap="showOper" src="/assets/icon/more.svg"></image>
+        </view>
+      </view>
+
+    </view>
+
+    <!-- 底部提示信息 -->
+    <view class="tips" wx:if="{{isShowTip}}">
+      <view>长按笔记可弹出快捷菜单</view>
+      <view>点击左上角菜单按钮，可弹出侧边栏菜单</view>
+      <view bindtap="closeTip">x点击此处不再显示该提醒</view>
+    </view>
+  </view>
+  <!-- 刷新编辑工具 -->
+  <view class="tools">
+    <image bindtap="refresh" src="/assets/icon/fresh.svg"></image>
+    <navigator hover-class="none" url="/pages/edit/edit">
+      <image src="/assets/icon/note.svg"></image>
+    </navigator>
+  </view>
+  <!-- 快捷菜单 -->
+  <van-action-sheet show="{{ operShow }}" actions="{{ operActions }}" bind:select="operSelect" bind:cancel="operClose" bind:click-overlay="operClose" cancel-text="取消" />
+  <!-- 左侧菜单栏 -->
+  <van-popup show="{{ sideShow }}" position="left" bind:click-overlay="closeSide">
+    <view class="my-cell-group">
+      <van-cell clickable title-style="text-align:center" bindtap="getAll" title="全部" />
+      <van-cell clickable title-style="text-align:center" bindtap="getDeleteList" title="回收站" />
+    </view>
+  </van-popup>
+  <!-- 分类菜单 -->
+  <van-action-sheet show="{{ classifyShow }}" actions="{{ classifyActions }}" bind:select="classifySelect" bind:cancel="closeClassify" bind:click-overlay="closeClassify" cancel-text="取消" />
+
+  <!-- 没有设置加密密码的弹窗 -->
+  <van-dialog message="请到“我的”-“保险箱”设置密码" confirm-button-color="#648CEB" close-on-click-overlay show="{{showConfirm}}" bind:confirm="toUser" show-cancel-button>
+  </van-dialog>
+  <!-- 验证加密密码的弹窗 -->
+  <van-dialog use-slot showConfirmButton="{{false}}" show="{{ checkConfirm }}" close-on-click-overlay>
+    <view class="input-cell">
+      <van-field model:value="{{encryption}}" border="{{false}}" placeholder="请输入您的密码" />
+    </view>
+    <button class="submit-btn" disabled="{{encryption.length<=0}}" bindtap="checkEncryption">确定</button>
+  </van-dialog>
+
+
+</view>

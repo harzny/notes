@@ -1,0 +1,30 @@
+<!--pages/classify/classify.wxml-->
+<view class="my-container">
+  <van-cell-group>
+    <van-cell bind:click="toList"  data-id="{{item.classifyId}}"  
+    data-name="{{item.classifyName}}" bindlongpress="showOper" 
+    data-classify="{{item}}" wx:for="{{classifyList}}" wx:key="id" 
+    title="{{item.classifyName}}" icon="/assets/icon/clsaaify.svg" is-link 
+    value="{{item.num}}">
+    </van-cell>
+  </van-cell-group>
+  <van-cell-group>
+    <van-field model:value="{{ classifyName }}" center placeholder="请输入新分类名称" border="{{ false }}" use-button-slot>
+      <van-button bindtap="newClassify" slot="button" size="small" type="info">新增</van-button>
+    </van-field>
+    <view class="tip">长按可编辑/删除分类</view>
+  </van-cell-group>
+
+  <van-action-sheet show="{{ classifyShow }}" actions="{{ actions }}" bind:select="select" 
+  bind:close="closeClassify" bind:click-overlay="closeClassify" bind:cancel="closeClassify" cancel-text="取消" />
+
+
+  <!-- 编辑的弹窗 -->
+  <van-dialog  use-slot showConfirmButton="{{false}}" show="{{classifyNameShow  }}" close-on-click-overlay>
+    <view class="input-cell">
+      <van-field model:value="{{currentClassifyName}}" border="{{false}}" placeholder="请输入您的密码" />
+    </view>
+    <button class="submit-btn" disabled="{{currentClassifyName.length<=0}}" bindtap="checkClassifyName">确定</button>
+  </van-dialog>
+
+</view>

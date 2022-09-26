@@ -1,0 +1,23 @@
+<!--pages/regist/regist.wxml-->
+<view class="my-container">
+  <view class="avatar-cell">
+    <van-uploader  file-list="{{ fileList }}" max-count="1" bind:after-read="afterRead" bind:delete="delete">
+      <image class="avatar-defautl" src="/assets/icon/touxiang.png"></image>
+    </van-uploader>
+  </view>
+  <view class="input-cell">
+    <image src="/assets/icon/nicheng.png"></image>
+    <van-field model:value="{{userName}}" placeholder="请输入昵称" />
+  </view>
+  <view class="input-cell">
+    <image src="/assets/icon/username.png"></image>
+    <van-field model:value="{{userAccount}}" placeholder="请输入账号" />
+  </view>
+  <view class="input-cell">
+    <image src="/assets/icon/password.png"></image>
+    <van-field model:value="{{password}}" placeholder="请输入密码" />
+  </view>
+  <!-- <button class="submit-btn" disabled="{{fileList.length<=0||name.length<=0||username.length<=0||password.length<=0}}" bindtap="regist">注册</button> -->
+  <button class="submit-btn" disabled="{{name.length<=0||username.length<=0||password.length<=0}}" bindtap="regist">注册</button>
+
+</view>

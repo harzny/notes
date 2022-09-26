@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+<view class="my-container">
+  <view class="input-cell">
+    <image src="/assets/icon/username.png"></image>
+    <van-field model:value="{{userAccount}}" placeholder="请输入您的账号" />
+  </view>
+  <view class="input-cell">
+    <image src="/assets/icon/password.png"></image>
+    <van-field model:value="{{password}}" placeholder="请输入您的密码" />
+  </view>
+  <button class="submit-btn" disabled="{{userAccount.length<=0||password.length<=0}}" bindtap="login">登录</button>
+  <navigator hover-class="none" url="/pages/regist/regist" class="regist-btn">还没有账号？立即注册</navigator>
+</view>

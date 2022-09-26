@@ -1,0 +1,44 @@
+/* pages/login/login.wxss */
+.my-container {
+  padding: 24rpx 56rpx;
+}
+
+.input-cell {
+  width: 638rpx;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 48rpx;
+}
+
+.input-cell image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.van-field_body {
+  width: 500rpx;
+}
+
+.submit-btn {
+  height: 88rpx;
+  background: #648CEB;
+  box-shadow: 0rpx 2rpx 14rpx #E2E5F0;
+  border-radius: 80rpx;
+  color: #ffffff;
+  margin-top: 72rpx;
+  border: none;
+}
+
+button[disabled]:not([type]) {
+  background-color: #DEE0EB;
+  color: white;
+}
+
+.regist-btn {
+  font-family: 'PingFang SC';
+  font-size: 24rpx;
+  color: #648CEB;
+  margin-top: 32rpx;
+  text-align: center;
+}

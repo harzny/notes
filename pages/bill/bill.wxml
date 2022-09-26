@@ -1,0 +1,88 @@
+<!--pages/account/account.wxml-->
+<view class="my-container">
+  <!-- 顶部的-->
+  <view class="top" style="background-image: url('/assets/icon/bg.svg') ">
+    <view class="top_icon">
+      <view class="top_left">
+        <image class="top_icon1" src="/assets/icon/topicon1.svg"></image>
+      </view>
+      <view bindtap="openCalendar" class="top_center" style="color: #fff;">
+        2022-09 <image class="top_icon4" src="/assets/icon/topicon4.svg"></image>
+      </view>
+
+      <view class="top_right">
+        <image class="top_icon2" src="/assets/icon/topicon2.svg"></image>
+        <image class="top_icon3" src="/assets/icon/topicon3.svg"></image>
+      </view>
+    </view>
+    <view class="month_pay">月支出</view>
+    <view class="month_pay_num">100</view>
+
+    <view class="top_bot">
+      <view>月收入：1000</view>
+      <view class="balance">本月结余 100</view>
+    </view>
+  </view>
+
+  <!-- 中间支出情况 -->
+  <view class="frame-table">
+      <van-cell-group inset>
+        <view class="frame-table-title">
+          <text style="float:left;margin-right:16rpx">08.30</text>
+          <text style="float:left;">周二</text>
+          <text style="float:right;"><text>支:</text>¥55</text>
+        </view>
+        <van-cell title="三餐" icon="/assets/icon/dian.svg" value="-¥18.00"></van-cell>
+        <van-cell title="三餐" icon="/assets/icon/dian.svg" value="-¥18.00"></van-cell>
+        <van-cell title="三餐" icon="/assets/icon/dian.svg" value="-¥18.00"></van-cell>
+      </van-cell-group>
+    </view>
+  <view class="frame-table">
+      <van-cell-group inset>
+        <view class="frame-table-title">
+          <text style="float:left;margin-right:16rpx">08.30</text>
+          <text style="float:left;">周二</text>
+          <text style="float:right;"><text>支:</text>¥45</text>
+        </view>
+        <van-cell title="三餐" icon="/assets/icon/dian.svg" value="-¥18.00"></van-cell>
+      </van-cell-group>
+    </view>
+  <!-- <van-cell-group inset class="info" wx:for="{{Accountlist}}" wx:for-item="account" wx:key="id">
+    <van-cell title="{{account.createdTime}} {{item.weekday}}" value="支：￥{{account.total}}" />
+    <van-cell bindtap="openMenuShow" icon="/assets/icon/dian.svg" wx:for="{{account.list}}" wx:key="id" title="{{item.monomial}}" value="-￥{{item.price}} " />
+  </van-cell-group> -->
+
+  <!-- 显示账单详情 -->
+  <van-action-sheet show="{{ menuShow }}" bind:click-overlay="closeMenuShow">
+    <view class="main_operation">
+      <view>账单详情</view>
+      <view class="operation">
+        <view>退款</view>
+        <view class="edit" style="padding: 0 48rpx;">修改</view>
+        <view style="padding-right: 24rpx; color:#F45762 ;">删除</view>
+      </view>
+    </view>
+    <view class="main_info">
+      <van-cell title="金额">
+        <view style="color:#F45762;">￥{{"66"}}</view>
+      </van-cell>
+      <van-cell title="分类" is-link>
+        <view style="color:#333333;">{{"衣服"}}</view>
+      </van-cell>
+
+      <view>
+        <van-cell title="时间">
+          <view class="time">时间</view>
+          <view class="record">记录于</view>
+        </van-cell>
+      </view>
+    </view>
+  </van-action-sheet>
+
+  <view class="add_account">
+    <navigator url="/pages/insertBill/insertBill" hover-class="none">
+      <image src="/assets/icon/add.svg"></image>
+    </navigator>
+  </view>
+  <van-calendar bind:close="closeCalendar" bind:confirm="closeCalendar" show="{{ calendarShow }}" bind:select="selectDate" min-date="{{ minDate }}" max-date="{{ maxDate }}" />
+</view>

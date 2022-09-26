@@ -1,0 +1,69 @@
+/* pages/user/user.wxss */
+.user-header{
+  width: 100%;
+  height: 248rpx;
+  background-color: #648CEB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nickname{
+  font-size: 24rpx;
+  text-align: center;
+  color: #EFF3FD;
+}
+.group{
+  height:calc(100vh-248rpx) ;
+  background-color: #F8F8F8;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.group .van-cell{
+  margin-bottom: 16rpx;
+}
+.input-cell image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.van-field__body {
+  width: 526rpx;
+  height: 72rpx;
+  background:  #F7F8F8 ;
+  padding: 24rpx 36rpx !important;
+  border: 2rpx solid #EFF0F1;
+  border-radius: 40rpx;
+  box-sizing: border-box;
+}
+
+.input-cell .van-cell__value {
+  width: 526rpx;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.input-cell:nth-child(1) {
+  margin-top: 64rpx;
+}
+
+.input-cell .van-filed__control {
+  font-size: 24rpx;
+}
+
+.submit-btn {
+  height: 72rpx;
+  width: 224rpx;
+  line-height: 72rpx;
+  background: #648CEB;
+  box-shadow: 0px 2rpx 14rpx #E2E5F0;
+  border-radius: 80rpx;
+  color: #ffffff;
+  margin: 52rpx auto;
+  border: none;
+}
+
+button[disabled]:not([type]) {
+  background-color: #DEE0EB;
+  color: white;
+}

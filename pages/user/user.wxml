@@ -1,0 +1,24 @@
+<!--pages/user/user.wxml-->
+<view class="my-container">
+  <view class="user-header">
+    <van-image width="164rpx" height="164rpx" fit="contain" src="{{baseUrl+user.avatar}}"> </van-image>
+    <view class="nickname">{{user.userName}}</view>
+  </view>
+  <view class="group">
+    <van-cell title="账号安全" bind:click="userDetail" border="{{false}}" icon="/assets/icon/id-safe.svg" is-link>
+    </van-cell>
+    <van-cell title="保险箱" bind:click="showDialog" border="{{false}}" icon="/assets/icon/safe-box.svg" is-link>
+    </van-cell>
+  </view>
+
+  <van-dialog use-slot show="{{ dialogShow }}" close-on-click-overlay show-confirm-button="{{false}}" bind:close="closeDialog">
+    <view class="input-cell">
+      <van-field border="{{false}}" type="password"  model:value="{{encryption}}" placeholder="请输入您的密码" />
+    </view>
+    <!-- 如果有设置好保险箱就不需要再次验证密码 -->
+    <view class="input-cell" wx:if="{{!hasEncryption}}">
+      <van-field border="{{false}}" type="password" model:value="{{repeatEncryption}}" bind:input="input" placeholder="请再次输入您的密码"   error-message="{{errorMessage}}" />
+    </view>
+    <button class="submit-btn"  disabled="{{encryption.length<=0||(hasEncryption?false:repeatEncryption.length<=0)}}" bindtap="encryption">确定</button>
+  </van-dialog>
+</view>

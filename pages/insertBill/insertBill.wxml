@@ -1,0 +1,73 @@
+<!--pages/insertBill/insertBill.wxml-->
+<view class="my-container">
+  <!-- 头部 -->
+  <view class="top-cha">
+    <view class="expand-code">
+      <text>支出</text>
+    </view>
+    <view class="income-code">
+      <text>收入</text>
+    </view>
+    <view class="insert-image">
+      <image src="/assets/icon/添加.svg"></image>
+    </view>
+  </view>
+  <!-- 图标  -->
+  <view class="icon">
+    <view class="mapper-icon" wx:for="{{image}}" wx:key="id" bindtap="selectImage" data-id="{{item.id}}">
+      <image src="{{item.isSelect?item.selectUrl:item.url}}" style="color:red"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 九宫格输入框 -->
+  <view class="bottom">
+    <view class="bottom-head"><input type="text" placeholder="点击输入备注..."></input>
+      <view class="money">0.00</view>
+      <!-- <view class="money"><text class="zero">{{num}}</text>.0</view> -->
+    </view>
+    <view class="bottom-body">
+      <view class="bottom-two">
+        <view class="items-two">今天 19:00</view>
+        <view class="items-two two-other">报销</view>
+        <view class="items-two two-other">图片</view>
+        <view class="items-two two-other">
+          <image src="/assets/icon/flag.svg"></image>
+        </view>
+      </view>
+      <view class="bottom-other">
+        <view class="number" bindtap="numInput" data-value="1">1</view>
+        <view class="number" bindtap="numInput" data-value="2">2</view>
+        <view class="number" bindtap="numInput" data-value="3">3</view>
+        <view class="number" bindtap="delInput">
+          <image src="/assets/icon/delete.svg"></image>
+        </view>
+      </view>
+      <view class="bottom-other">
+        <view class="number" bindtap="numInput" data-value="4">4</view>
+        <view class="number" bindtap="numInput" data-value="5">5</view>
+        <view class="number" bindtap="numInput" data-value="6">6</view>
+        <view class="number" bindtap="opInput" data-value="-">
+          -
+        </view>
+      </view>
+      <view class="bottom-other">
+        <view class="number" bindtap="numInput" data-value="7">7</view>
+        <view class="number" bindtap="numInput" data-value="8">8</view>
+        <view class="number" bindtap="numInput" data-value="9">9</view>
+        <view class="number" bindtap="opInput" data-value="+">
+          +
+        </view>
+      </view>
+      <view class="bottom-other">
+        <view class="number" bindtap="onShow">再记</view>
+        <view class="number" bindtap="numInput" data-value="0">0</view>
+        <view class="number" bindtap="doInput" data-value=".">.</view>
+        <view class="number save" bindtap="opInput">
+          保存
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

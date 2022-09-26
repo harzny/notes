@@ -1,0 +1,6 @@
+<!--pages/edit/edit.wxml-->
+<view class="my-container">
+  <van-field  placeholder-style="color:#666" model:value="{{noteTitle}}" placeholder="请输入您的标题" />
+  <van-field   placeholder="请输入正文内容" model:value="{{noteContent}}" border="{{false}}" type="textarea"  />
+  <image class="submit-btn" bindtap="submit" src="/assets/icon/submit.svg"></image>
+</view>

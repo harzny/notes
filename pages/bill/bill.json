@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-cell": "/vant/weapp/cell/index",
+    "van-cell-group": "/vant/weapp/cell-group/index",
+    "van-calendar": "/vant/weapp/calendar/index",
+    "van-popup": "/vant/weapp/popup/index",
+    "van-action-sheet": "/vant/weapp/action-sheet/index"
+  },
+  "navigationStyle": "custom"
+}

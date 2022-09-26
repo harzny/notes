@@ -1,0 +1,40 @@
+/* pages/register/register.wxss */
+.my-container{
+  padding: 72rpx 56rpx;
+}
+.avatar-cell{
+  width: 164rpx;
+  height: 164rpx;
+  margin: auto;
+}
+.avatar-defautl {
+  width: 164rpx;
+  height: 164rpx;
+}
+.input-cell{
+  width: 638rpx;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 48rpx;
+}
+.input-cell image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.vant-field_body {
+  width: 500rpx ;
+}
+.submit-btn{
+  height: 88rpx;
+  background: #648CEB;
+  box-shadow: 0rpx 2rpx 14rpx #E2E5F0;
+  border-radius: 80rpx;
+  color: #ffffff;
+  margin-top: 72rpx;
+  border: none;
+}
+button[disabled]:not([type]) {
+  background-color: #DEE0EB;
+  color:white;
+}
